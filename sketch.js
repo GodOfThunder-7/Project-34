@@ -62,11 +62,15 @@ function draw() {
   roof.display();
   drawSprites();
 }
-
-function keyPressed() { 
-	if (keyCode === LEFT_ARROW)	 
-	{ Matter.Body.applyForce(bob1.body,bob1.body.position,{x:mouseX,y:mouseY}); } 
-} 
+function mouseDragged(){
+	Matter.Body.setPosition(bob1.body,{x:mouseX,y:mouseY})
+}
+function drawLine(constraint){
+	bobPosition = constraint.bodyA.position;
+	roofPosition = constraint.bodyB.position;
+	roofBodyOffset = constraint.pointB; 
+	roofBodyX = roofBodyPosition.x + roofBodyOffset.x roofBodyY = roofBodyPosition.y + roofBodyOffset.y line(bobBodyPosition.x, bobBodyPosition.y, roofBodyX, roofBodyY);
+}
 
 	function drawLine(constraint) { 
 		bobPosition = constraint.bodyA.position 
