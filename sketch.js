@@ -69,7 +69,9 @@ function drawLine(constraint){
 	bobPosition = constraint.bodyA.position;
 	roofPosition = constraint.bodyB.position;
 	roofBodyOffset = constraint.pointB; 
-	roofBodyX = roofBodyPosition.x + roofBodyOffset.x roofBodyY = roofBodyPosition.y + roofBodyOffset.y line(bobBodyPosition.x, bobBodyPosition.y, roofBodyX, roofBodyY);
+	roofBodyX = roofBodyPosition.x + roofBodyOffset.x;
+	roofBodyY = roofBodyPosition.y + roofBodyOffset.y;
+	line(bobBodyPosition.x, bobBodyPosition.y, roofBodyX, roofBodyY);
 }
 
 	function drawLine(constraint) { 
